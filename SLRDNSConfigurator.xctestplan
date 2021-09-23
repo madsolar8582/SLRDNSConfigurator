@@ -1,0 +1,47 @@
+{
+  "configurations" : [
+    {
+      "id" : "D1ECBCAA-76A4-4A1D-A730-5908D2082822",
+      "name" : "Threading and Undefined Behavior",
+      "options" : {
+        "threadSanitizerEnabled" : true,
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    },
+    {
+      "id" : "A9EFD478-8216-410A-98D8-AD9BE95E72C9",
+      "name" : "Memory Safety",
+      "options" : {
+        "addressSanitizer" : {
+          "detectStackUseAfterReturn" : true,
+          "enabled" : true
+        },
+        "mallocScribbleEnabled" : true
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:SLRDNSConfigurator.xcodeproj",
+          "identifier" : "7A8033AD26FBDF2400B7F54E",
+          "name" : "SLRDNSConfigurator"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true,
+    "userAttachmentLifetime" : "keepAlways"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SLRDNSConfigurator.xcodeproj",
+        "identifier" : "7A8033B526FBDF2400B7F54E",
+        "name" : "SLRDNSConfiguratorTests"
+      }
+    }
+  ],
+  "version" : 1
+}
