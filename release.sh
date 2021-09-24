@@ -16,7 +16,7 @@ xcodebuild clean archive -project SLRDNSConfigurator.xcodeproj -scheme SLRDNSCon
 echo -e "\nBuilding Mac Catalyst"
 xcodebuild clean archive -project SLRDNSConfigurator.xcodeproj -scheme SLRDNSConfigurator -configuration Release -destination 'platform=macOS,variant=Mac Catalyst' -archivePath build/archives/ios-cat.xcarchive SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 echo -e "\nBuilding macOS"
-xcodebuild clean archive -project SLRDNSConfigurator.xcodeproj -scheme SLRDNSConfigurator -configuration Release -archivePath build/archives/mac.xcarchive SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+xcodebuild clean archive -project SLRDNSConfigurator.xcodeproj -scheme SLRDNSConfigurator -configuration Release -destination 'generic/platform=macOS,name=Any Mac' -archivePath build/archives/mac.xcarchive SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 echo -e "\nBuilding tvOS Device"
 xcodebuild clean archive -project SLRDNSConfigurator.xcodeproj -scheme SLRDNSConfigurator -configuration Release -destination generic/platform=tvOS -archivePath build/archives/tvos.xcarchive SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES ENABLE_BITCODE=YES
 echo -e "\nBuilding tvOS Simulator"
