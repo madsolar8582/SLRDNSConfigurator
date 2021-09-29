@@ -35,6 +35,18 @@ static const char *const SLRDefaultDoTPort = "853";
 
 @implementation SLRDNSConfigurator
 
+#pragma mark - Object Life Cycle
+
+- (instancetype)init __attribute__((noreturn))
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"-init is not available on SLRDNSConfigurator" userInfo:nil];
+}
+
++ (instancetype)new __attribute__((noreturn))
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"+new is not available on SLRDNSConfigurator" userInfo:nil];
+}
+
 #pragma mark - Public API
 
 + (void)configureDefaultNetworkContextWithDoHProvider:(SLRDoHProvider)provider

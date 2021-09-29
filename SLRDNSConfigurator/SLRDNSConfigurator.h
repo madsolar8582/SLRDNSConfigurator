@@ -289,6 +289,10 @@ typedef NS_ENUM(NSUInteger, SLRDoTProvider) {
  */
 @interface SLRDNSConfigurator : NSObject
 
+- (instancetype)init NS_UNAVAILABLE;
+
++ (instancetype)new NS_UNAVAILABLE;
+
 /**
  * Configures the default @c nw_privacy_context with the specified DNS over HTTPS provider.
  * @param provider The DNS over HTTPS provider to use.
