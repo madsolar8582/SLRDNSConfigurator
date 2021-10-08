@@ -16,7 +16,11 @@ let package = Package(
             name: "SLRDNSConfigurator",
             path: ".",
             sources: ["SLRDNSConfigurator"],
-            publicHeadersPath: "SLRDNSConfigurator"
+            publicHeadersPath: "SLRDNSConfigurator",
+            linkerSettings: [
+                .linkedFramework("Foundation"),
+                .linkedFramework("Network")
+            ]
         ),
         .testTarget(
             name: "SLRDNSConfiguratorTests",
